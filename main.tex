@@ -1,0 +1,34 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage[nopostdot]{glossaries}
+
+\renewcommand{\glossarysection}[2][]{}
+
+
+\makenoidxglossaries
+
+\newglossaryentry{JS}{
+	name=JS,
+	description={Javascript}
+}
+
+\begin{document}
+
+	
+
+	\include{settings.tex}
+	\include{pages/deckblatt.tex}
+	\pagenumbering{Roman}
+
+
+	\include{pages/toc.tex}
+	
+	\include{pages/abbreviations.tex}
+
+	\pagenumbering{arabic}
+
+	\include{pages/einleitung.tex}
+	\include{pages/test.tex}
+\end{document}
