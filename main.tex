@@ -3,16 +3,24 @@
 \usepackage{graphicx}
 \usepackage{svg}
 \usepackage[nopostdot]{glossaries}
+\usepackage{url}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage[backend=bibtex, style=verbose, bibstyle=numeric]{biblatex}
+
+\addbibresource{literatur.bib}
 
 \renewcommand{\glossarysection}[2][]{}
 
 
 \makenoidxglossaries
 
-\newglossaryentry{JS}{
-	name=JS,
-	description={Javascript}
-}
+\newglossaryentry{JS}{name=JS, description={Javascript}}
+\newglossaryentry{HCC}{name=HCC, description={Hub Control Center}}
+\newglossaryentry{REST}{name=REST, description={Representational State Transfer}}
+\newglossaryentry{BVD}{name=BVD, description={Bodenverkehrsdienste}}
+
 
 \begin{document}
 
@@ -30,5 +38,19 @@
 	\pagenumbering{arabic}
 
 	\include{pages/einleitung.tex}
-	\include{pages/test.tex}
+	\include{pages/projektplanung.tex}
+	\include{pages/analysephase.tex}
+	\include{pages/entwurfsphase.tex}
+	\include{pages/implementierungsphase.tex}
+
+
+
+	\nocite{*}
+	\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+	\printbibliography[type=online,resetnumbers=true]
+
+
+	\include{pages/anhang.tex}
+
+	
 \end{document}
