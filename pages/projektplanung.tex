@@ -1,10 +1,26 @@
 \section{Projektplanung}
 
-	\subsection{Projektphasen}
-	Für die Umsetzung des Projektes standen 70 Stunden zur Verfügung, wie es die IHK Darmstadt vorschreibt.\footcite{2} Bevor mit dem Projekt gestartet wurde, fand eine Aufteilung auf verschiedene Phasen statt,
-	die den kompletten Prozess der Softwareentwicklung abdecken.\\ \\ \\
+	\subsection{Bewertung des Ist-Zustandes}
+	Während der Analyse des Ist-Zustandes wurde festgestellt, das die bereits bestehenden Systeme für eine aktive Flugsteuerung nicht ausreichend sind. Mit den bestehenden Systemen ist es unmöglich einen Einblick in die Performance des aktuellen Tages zu bekommen. Diese Systeme sind nur auf Vortagswerte ausgelegt. Für eine aktive Flugsteuerung ist es nötig die Prozesse in Echtzeit abzubilden. Zusätzlich sind beide Systeme aufgrund ihres hohen alters inperformant, man muss mehrere Minuten auf eine simple Auswertung warten. Beide Systeme stellen keine Mobile Ansicht zur Verfügung.
 
-	\begin{table}
+
+	\subsection{Definition von Zielen}
+	Nach der Bewertung des Ist-Zustandes wurden folgende Ziele festgelegt.
+	\begin{itemize}
+		\item Historische Auswertungen
+		\item Realtime Funktion
+		\item Mobile Ansicht
+		\item Erreichbarkeit außerhalb des Lufthansa Netzwerkes
+	\end{itemize}
+
+
+	\subsection{Zeit- und Ressourcenplanung}
+
+	\subsubsection{Zeitplanung}
+	Für die Umsetzung des Projektes standen 70 Stunden zur Verfügung, wie es die \glslink{IHK}{IHK} Darmstadt vorschreibt.\footcite{2} Bevor mit dem Projekt gestartet wurde, fand eine Aufteilung auf verschiedene Phasen statt,
+	die den kompletten Prozess der Softwareentwicklung abdecken.\\
+
+	\begin{table}[htp]
 
 		\begin{center}
 			\begin{tabular}{llll} \toprule
@@ -18,13 +34,68 @@
 			\end{tabular}
 		\end{center}
 		%\caption{Really long caption with lots of info}
+	Siehe Appendix: \ref{appendix:zeit_detail} für eine ausführliche Gliederung
 	\end{table}
 
-	
 
-	\vspace{16pt}
-	
+	\subsubsection{Personalplanung}
+	Das Projekt wurde mit der Hilfe von Matthias Partzsch geplant und realisiert. Die unten aufgeführten Personenkreise haben regelmäßig das Interface auf ihre Bedienbarkeit und Funktionen getestet.
+\\
 
-	\subsection{Abweichungen vom Projektantrag}
-	\subsection{Ressourcenplanung}
-	\subsection{Entwicklungsprozess}
+	\begin{table}[htp]
+
+		\begin{center}
+			\begin{tabular}{llll} \toprule
+				Beteiligte Person / Personenkreis & Rolle\\ \bottomrule
+				Tobias Jung & Projektmitarbeiter \\
+				Matthias Partzsch & Projektleiter \\
+				Hub Duty Manager & Nutzer (UX Tester) \\
+				Hub Duty Officer & Nutzer (UX Tester) \\ \bottomrule
+			\end{tabular}
+		\end{center}
+		%\caption{Really long caption with lots of info}
+	\end{table}
+
+
+	\subsection{Kostenplan}
+
+	\subsubsection{Personalkosten}
+	In die Personalkostenplanung fließen nur meine tatsächlichen 69.5 Arbeitsstunden ein, da ich der einzige war, der an dem Projekt aktiv gearbeitet hat.\\
+
+	\begin{table}[htp]
+
+		\begin{center}
+			\begin{tabular}{llll} \toprule
+				Position & Wert \\ \bottomrule
+				Kosten pro Stunde & 9.42 Euro \\
+				Umgesetzte Arbeitsstunden & 69.5h \\ \bottomrule
+			\end{tabular}
+		\end{center}
+		%\caption{Really long caption with lots of info}
+	\end{table}
+	
+	\[ 69.5h\,*\,9.42\,\frac{Euro}{h} = 654.69\,Euro \]
+
+
+	\subsubsection{Sonstige Kosten}
+	In die Sonstigen Kosten fließen die Server (Hardware / Betriebssystem) und Lizenzkosten (MongoDB) ein. Gerechnet wird mit einer Nutzungsdauer von 24 Monaten (2 Jahre).\\
+
+	\begin{table}[htp]
+
+		\begin{center}
+			\begin{tabular}{llll} \toprule
+				Position & Kosten pro Monat \\ \bottomrule
+				ThinkStation & 75 Euro \\
+				MongoDB Cloud Database & 60 Euro \\ \bottomrule
+			\end{tabular}
+		\end{center}
+		%\caption{Really long caption with lots of info}
+	\end{table}
+	
+	\[ (75 Euro + 60 Euro)\,*\,24 = 3240 Euro \]
+
+	\subsubsection{Gesamtkosten}
+	Gerechnet für eine 24 monatige Laufzeit
+		
+	\[ (Personalkosten + Sonstige Kosten) = Gesamtkosten \]
+	\[ (654.69 Euro + 3240 Euro) = 3694.64 Euro \]

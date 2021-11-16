@@ -2,13 +2,23 @@
 
 \usepackage{graphicx}
 \usepackage{svg}
-\usepackage[nopostdot]{glossaries}
 \usepackage{url}
 \usepackage{amsfonts}
 \usepackage{booktabs}
 \usepackage{siunitx}
 \usepackage[backend=bibtex, style=verbose, bibstyle=numeric]{biblatex}
 \usepackage[toc,title,page]{appendix}
+\usepackage{hyperref}
+\usepackage{eurosym}
+\usepackage[nopostdot]{glossaries}
+
+\hypersetup{
+    colorlinks,
+    citecolor=,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
 
 \addbibresource{literatur.bib}
 
@@ -21,6 +31,14 @@
 \newglossaryentry{HCC}{name=HCC, description={Hub Control Center}}
 \newglossaryentry{REST}{name=REST, description={Representational State Transfer}}
 \newglossaryentry{BVD}{name=BVD, description={Bodenverkehrsdienste}}
+\newglossaryentry{HT}{name=HT, description={Hyper-Threading}}
+\newglossaryentry{SODIMM}{name=SODIMM, description={Small Outline Dual Inline Memory Module}}
+\newglossaryentry{RAM}{name=RAM, description={Random-Access Memory}}
+\newglossaryentry{IDE}{name=IDE, description={Integrated Development Environment}}
+\newglossaryentry{IHK}{name=IHK, description={Industrie- und Handelskammern}}
+
+\newglossaryentry{SQL}{name=SQL, description={Structured Query Language}}
+
 
 
 \begin{document}
@@ -38,9 +56,9 @@
 
 	\pagenumbering{arabic}
 
-	\include{pages/einleitung.tex}
+	\include{pages/vorwort.tex}
+	\include{pages/projektdefinition.tex}
 	\include{pages/projektplanung.tex}
-	\include{pages/analysephase.tex}
 	\include{pages/entwurfsphase.tex}
 	\include{pages/implementierungsphase.tex}
 
