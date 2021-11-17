@@ -18,3 +18,12 @@
 	iocc.dlh.de → hcc.dlh.de [iocc.dlh.de. 86400 IN CNAME hcc.dlh.de]\\
 
 	\subsection{Netzwerkfreigaben}
+	Damit man aus dem Netzwerk auf den Webserver zugreifen kann, ist es zwingend erforderlich in der Lufthansa Internen Firewall die Ports für bestimmte Nutzergruppen zu öffnen.
+	Die Anforderung war, dass jeder aus dem Lufthansa Netz und über VPN auf den Webserver zugreifen kann, glücklicherweise geht jeder Traffic über den Lufthansa Proxy, weshalb lediglich die Portfreigabe zwischen dem Proxy Server und dem Webserver bestehen muss.
+	
+	Folgende Ports werden aufgrund des Webservers geöffnet:
+
+	\begin{itemize}
+		\item 80/TCP - HTTP Server (Leitet auf HTTPS weiter)
+		\item 443/TCP - HTTPS Server
+	\end{itemize}
