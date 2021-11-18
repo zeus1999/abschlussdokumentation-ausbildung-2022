@@ -6,12 +6,31 @@
 	Die Filter Komponente, welche eine zentrale Funktion inne hat, ist dafür da, den Datenfluss zwischen Frontend und Backend aufgrund der Nutzereinstellungen zu steuern. (Appendix: \ref{appendix:foa_filter}) Jeder einzelne Filter bietet die Möglichkeit exakte Selektionen für die Auswahl der Flüge zu treffen. (Appendix: \ref{appendix:foa_filter_2}) Zusätzlich zu der Selektion, gibt es "Vordefinierte Sets (Predefined Sets) womit es möglich ist, Filteroptionen zu gruppieren. Zum Beispiel bei dem Filter "Subfleet" bei dem man den Flugzeugtyp auswählen kann, gibt es die Sets: Narrow Body (Schmale Flugzeuge) und Wide Body (Breite Flugzeuge), das sorgt für eine bessere User Experience. \ref{appendix:foa_filter_3})
 
 	\subsubsection{Komponentenaufbau}
-	Jede Komponente ist gleich aufgebaut, im Projektverzeichnis gibt es einen Unterordner mit dem Namen, in diesem Ordner sind drei Dateien.\\
-	\\Die \textbf{NAME.compontent.ts} ist die zentrale Datei der Komponente welche die Logik beeinhaltet. (Appendix: \ref{appendix:component_ts})\\
+	{
+		\noindent
+		Jede Komponente ist gleich aufgebaut, im Projektverzeichnis gibt es einen Unterordner mit dem Namen, in diesem Ordner sind drei Dateien.
+	}
+	\vspace{10pt}
 
-	Die \textbf{NAME.compontent.html} beeinhaltet das \glslink{HTML}{HTML} Template welches dann in die Webapplikation eingebunden wird. (Appendix: \ref{appendix:component_html}).\\
+	{
+		\noindent
+		Die \textbf{NAME.compontent.ts} ist die zentrale Datei der Komponente welche die Logik beeinhaltet (Appendix: \ref{appendix:component_ts}).
+	}
+	\vspace{10pt}
+
+	{
+		\noindent
+		Die \textbf{NAME.compontent.html} beeinhaltet das \glslink{HTML}{HTML} Template welches dann in die Webapplikation eingebunden wird (Appendix: \ref{appendix:component_html}).
+	}
+	\vspace{10pt}
+
+	{
+		\noindent
+		Die \textbf{NAME.compontent.scss} beeinhaltet das \glslink{SCSS}{SCSS} Stylesheet welches exclusiv für die HTML Datei der Komponente zuständig ist und nicht das restliche \glslink{DOM}{DOM} beeinflusst (Appendix: \ref{appendix:component_scss}).
+	}
 	
-	Die \textbf{NAME.compontent.scss} beeinhaltet das \glslink{SCSS}{SCSS} Stylesheet welches exclusiv für die HTML Datei der Komponente zuständig ist und nicht das restliche \glslink{DOM}{DOM} beeinflusst. (Appendix: \ref{appendix:component_scss}). 
+
+	
 
 	\subsection{Backend}
 	Das Backend wurde in NodeJS umgesetzt. NodeJS ist eine Open-Source-JavaScript-Laufzeitumgebung, welche auf der Google V8 Engine basiert und für hochskalierbare Netzwerkapplikationen entworfen wurde. Node.js-Anwendungen sind ereignisbasiert und laufen asynchron ab, diese sind lediglich Single Thread fähig, man kann eine Applikation aber "forken" um diese zu replizieren um sie mit mehreren Threads laufen zu lassen.\footcite{4}\\
@@ -20,28 +39,60 @@
 
 
 	\subsubsection{\glslink{OBELISK}{Obelisk}}
-	\glslink{OBELISK}{Obelisk} ist das Data Warehouse der Lufthansa mit Schwerpunkt auf Daten aus dem operativen Umfeld. \glslink{OBELISK}{Obelisk} wird teilweise auch konzernübergreifend genutzt.
 
-	Das Archiv des Data Warehouses reicht zum Teil über mehrere Jahrzente zurück, dessen Verarbeitung aber im Wesentlichen echtzeitnah erfolgt.
+	{
+		\noindent
+		\glslink{OBELISK}{Obelisk} ist das Data Warehouse der Lufthansa mit Schwerpunkt auf Daten aus dem operativen Umfeld. \glslink{OBELISK}{Obelisk} wird teilweise auch konzernübergreifend genutzt.
+	}
 
-	\glslink{OBELISK}{Obelisk} basiert auf einem Oracle Enterprise RDBMS, neben dem ein Apache Webserver aufgesetzt wurde, um eine webbasierte Plattform anzubieten. Abfragen über Business Intelligence Tools wie IBM Cognos sind ebenfalls im Programm enthalten.\\
-	\textbf{Aus Sicherheitsgründen werden die interne Struktur und die verwendeten Tabellen nicht offengelegt.}
+	{
+		\noindent
+		Das Archiv des Data Warehouses reicht zum Teil über mehrere Jahrzente zurück, dessen Verarbeitung aber im Wesentlichen echtzeitnah erfolgt.
+	}
+
+	{
+		\noindent
+		\glslink{OBELISK}{Obelisk} basiert auf einem Oracle Enterprise RDBMS, neben dem ein Apache Webserver aufgesetzt wurde, um eine webbasierte Plattform anzubieten. Abfragen über Business Intelligence Tools wie IBM Cognos sind ebenfalls im Programm enthalten.
+	}
+
+	{
+		\noindent
+		\textbf{Aus Sicherheitsgründen werden die interne Struktur und die verwendeten Tabellen nicht offengelegt.}
+	}
 
 	\subsection{DNS}
-	Um die Webapplikation bequem von etwaigen Geräten erreichbar zu machen, wurden 4 Subdomains auf den Lufthansa DNS Servern im Intranet angelegt.\\
-	Die Interne Domain lautet "dlh.de", somit sind alle Subdomains dieser unterzuordnen. \\
 
-	IP Adressen werden aus Sicherheitsgründen anonymisiert.
+	{
+		\noindent
+		Um die Webapplikation bequem von etwaigen Geräten erreichbar zu machen, wurden 4 Subdomains auf den Lufthansa DNS Servern im Intranet angelegt.\\
+		Die Interne Domain lautet "dlh.de", somit sind alle Subdomains dieser unterzuordnen.	
+	}
 
+	{
+		\noindent
+		IP Adressen werden aus Sicherheitsgründen anonymisiert.
+	}
+	
 	\vspace{16pt}
 
-	\textbf{A-Record (IPv4)}\\
-	hcc.dlh.de → xxx.xxx.xxx.xxx [hcc.dlh.de. 86400 IN A xxx.xxx.xxx.xxx]\\
+	{
+		\noindent
+		\textbf{A-Record (IPv4)}\\
+		hcc.dlh.de → xxx.xxx.xxx.xxx [hcc.dlh.de. 86400 IN A xxx.xxx.xxx.xxx]
+	}
 
-	\textbf{CNAME-Record (Canonical Name)}\\
-	foa.dlh.de → hcc.dlh.de [foa.dlh.de. 86400 IN CNAME hcc.dlh.de]\\
-	occ.dlh.de → hcc.dlh.de [occ.dlh.de. 86400 IN CNAME hcc.dlh.de]\\
-	iocc.dlh.de → hcc.dlh.de [iocc.dlh.de. 86400 IN CNAME hcc.dlh.de]\\
+	\vspace{8pt}
+
+	{
+		\noindent
+		\textbf{CNAME-Record (Canonical Name)}\\
+		foa.dlh.de → hcc.dlh.de [foa.dlh.de. 86400 IN CNAME hcc.dlh.de]\\
+		occ.dlh.de → hcc.dlh.de [occ.dlh.de. 86400 IN CNAME hcc.dlh.de]\\
+		iocc.dlh.de → hcc.dlh.de [iocc.dlh.de. 86400 IN CNAME hcc.dlh.de]
+	}
+	
+
+	
 
 	\subsection{Netzwerkfreigaben}
 	Damit man aus dem Netzwerk auf den Webserver zugreifen kann, ist es zwingend erforderlich in der Lufthansa Internen Firewall die Ports für bestimmte Nutzergruppen zu öffnen.
