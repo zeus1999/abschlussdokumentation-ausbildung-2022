@@ -1,16 +1,23 @@
 \section{Projektdurchführung}
 
 	\subsection{Frontend}
+	Für die Entwicklung des Frontends entschied ich mich für Angular in der Version 12 mit Angular Material als Designbibliothek. Angular ist ein Frontend Webapplikationsframework welches auf TypeScript basiert. Es wird ständig durch eine Community bestehend aus tausenden von Einzelpersonen, Unternehmen und Organisationen angeführt von Google weiterentwickelt. \footcite{3}\\
+	Angular ist Komponenten basiert, somit setzt sich die Applikation aus einer Hauptkompontente zusammen welche sich wiederumdann aus mehreren Unterkomponenten zusammensetzt. Derzeit sind es 31 Module, welche die Prozesse, den Liveticker und verschiedene Steuermodule enthalten. Das gesamte Projekt ist modular aufgebaut, sodass man alle Module/Bausteine wiederverwenden kann und somit die Effizienz, Entwickelbarkeit und Wiedererkennung zu verbessern.\\
+	Die Filter Komponente, welche eine zentrale Funktion inne hat, ist dafür da, den Datenfluss zwischen Frontend und Backend aufgrund der Nutzereinstellungen zu steuern. (Appendix: \ref{appendix:foa_filter}) Jeder einzelne Filter bietet die Möglichkeit exakte Selektionen für die Auswahl der Flüge zu treffen. (Appendix: \ref{appendix:foa_filter_2}) Zusätzlich zu der Selektion, gibt es "Vordefinierte Sets (Predefined Sets) womit es möglich ist, Filteroptionen zu gruppieren. Zum Beispiel bei dem Filter "Subfleet" bei dem man den Flugzeugtyp auswählen kann, gibt es die Sets: Narrow Body (Schmale Flugzeuge) und Wide Body (Breite Flugzeuge), das sorgt für eine bessere User Experience. \ref{appendix:foa_filter_3})
+
+
 	\subsection{Backend}
 	\subsubsection{\glslink{OBELISK}{Obelisk}}
 	\subsection{DNS}
 	Um die Webapplikation bequem von etwaigen Geräten erreichbar zu machen, wurden 4 Subdomains auf den Lufthansa DNS Servern im Intranet angelegt.\\
-	Die Interne Domain lautet "dlh.de", somit sind alle Subdomains dieser unterzuordnen. 
+	Die Interne Domain lautet "dlh.de", somit sind alle Subdomains dieser unterzuordnen. \\
 
-	\vspace{8pt}
+	IP Adressen werden aus Sicherheitsgründen anonymisiert.
+
+	\vspace{16pt}
 
 	\textbf{A-Record (IPv4)}\\
-	hcc.dlh.de → xxx.xxx.xxx.xxx (IP Adresse des Servers anonymisiert)[hcc.dlh.de. 86400 IN A xxx.xxx.xxx.xxx]\\
+	hcc.dlh.de → xxx.xxx.xxx.xxx [hcc.dlh.de. 86400 IN A xxx.xxx.xxx.xxx]\\
 
 	\textbf{CNAME-Record (Canonical Name)}\\
 	foa.dlh.de → hcc.dlh.de [foa.dlh.de. 86400 IN CNAME hcc.dlh.de]\\
