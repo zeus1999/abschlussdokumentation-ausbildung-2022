@@ -7,7 +7,14 @@
 
 
 	\subsection{Backend}
+	Das Backend wurde in NodeJS umgesetzt. NodeJS ist eine Open-Source-JavaScript-Laufzeitumgebung, welche auf der Google V8 Engine basiert und für hochskalierbare Netzwerkapplikationen entworfen wurde. Node.js-Anwendungen sind ereignisbasiert und laufen asynchron ab, diese sind lediglich Single Thread fähig, man kann eine Applikation aber "forken" um diese zu replizieren um sie mit mehreren Threads laufen zu lassen.\footcite{4}\\
+	Das Backend hat mehrere funktionen, einmal eine bestehende OracleDB Datenbankverbindung zum Lufthansa Datawarehouse (\glslink{OBELISK}{Obelisk}) aufrecht zuhalten und verschiedene Tabellen für Flugerreignisse und Prozesszeitstempel in der eigenen lokalen MongoDB Datenbank zu replizieren und nachzuberechnen. Dies geschieht alle 30 Sekunden um eine "Nahezu Echtzeit" Auswertung möglich zu machen. (Appendix: \ref{appendix:mongoose_model})
+
+
+
 	\subsubsection{\glslink{OBELISK}{Obelisk}}
+
+
 	\subsection{DNS}
 	Um die Webapplikation bequem von etwaigen Geräten erreichbar zu machen, wurden 4 Subdomains auf den Lufthansa DNS Servern im Intranet angelegt.\\
 	Die Interne Domain lautet "dlh.de", somit sind alle Subdomains dieser unterzuordnen. \\
