@@ -45,7 +45,7 @@
 		{
 			\noindent
 			\underline{Anpassbarkeit}\\
-			Um ein bereits bestehendes Tool zu erweitern, ist es von Vorteil wenn dieses Modular aufgebaut ist. Für eine aktive Steuerung ist es ebenfalls notwendig das es möglich ist kurzfristige Änderungen schnell umzusetzen um die operativen Mitarbeiter mit den benötigten Reportingtools auszustatten. Aus diesem Grund wird die Gewichtung ebenfalls auf \textbf{15 \%} gesetzt.
+			Um ein bereits bestehendes Tool zu erweitern, ist es von Vorteil wenn dieses Modular aufgebaut ist. Für eine aktive Steuerung ist es ebenfalls notwendig, dass es möglich ist kurzfristige Änderungen schnell umzusetzen um die operativen Mitarbeiter mit den benötigten Reportingtools auszustatten. Aus diesem Grund wird die Gewichtung ebenfalls auf \textbf{15 \%} gesetzt.
 		}
 
 		\vspace{8pt}
@@ -57,7 +57,7 @@
 		}
 
 		\subsubsection{Auswertung}
-		Nach einer ausführlichen Analyse der bestehendes Produkte und des geplanten Projektes wurde folgendes Ergebnis erziehlt.
+		Nach einer ausführlichen Analyse der bestehendes Produkte und des geplanten Projektes wurde folgendes Ergebnis erzielt:
 
 		\begin{itemize}
 			\item Platz 1: Flight Operation Analyser (400 Punkte)
@@ -68,7 +68,7 @@
 		\textbf{Für eine ausführliche Nutzwertanalyse: (Appendix: \ref{appendix:nutzwertanalyse})}
 
 	\subsection{Definition von Zielen}
-	Nach der Bewertung des Ist-Zustandes wurden folgende Ziele festgelegt.
+	Nach der Bewertung des Ist-Zustandes wurden folgende Ziele festgelegt:
 	\begin{itemize}
 		\item Historische Auswertungen
 		\item Realtime Funktion
@@ -137,11 +137,11 @@
 		%\caption{Really long caption with lots of info}
 	\end{table}
 	
-	\[ 69.5h\,*\,9.42\,\frac{Euro}{h} = 654.69\,Euro \]
+	\[ 69.5\,h\,*\,9.42\,\frac{Euro}{h} = 654.69\,Euro \]
 
 
 	\subsubsection{Sonstige Kosten}
-	In die Sonstigen Kosten fließen die Server (Hardware / Betriebssystem) und Lizenzkosten (MongoDB) ein. Gerechnet wird mit einer Nutzungsdauer von 24 Monaten (2 Jahre).\\
+	In die sonstigen Kosten fließen die Server (Hardware/Betriebssystem) und Lizenzkosten (MongoDB) ein. Gerechnet wird mit einer Nutzungsdauer von 24 Monaten (2 Jahre).\\
 
 	\begin{table}[htp]
 
@@ -155,10 +155,44 @@
 		%\caption{Really long caption with lots of info}
 	\end{table}
 	
-	\[ (75 Euro + 60 Euro)\,*\,24 = 3240 Euro \]
+	\[ (75\,Euro + 60\,Euro)\,*\,24 = 3240\,Euro \]
 
 	\subsubsection{Gesamtkosten}
 	Gerechnet für eine 24 monatige Laufzeit
 		
-	\[ (Personalkosten + Sonstige Kosten) = Gesamtkosten \]
-	\[ (654.69 Euro + 3240 Euro) = 3694.64 Euro \]
+	\[ (Personalkosten + sonstige Kosten) = Gesamtkosten \]
+	\[ (654,69\,Euro + 3240\,Euro) = 3694,64\,Euro \]
+
+
+
+\subsection{Lastenheft}
+Es folgt ein Auszug aus dem Lastenheft mit Fokus auf den Anforderungen:\\
+
+\textbf{Die Anwendung muss folgende Anforderungen erfüllen.}
+
+\begin{enumerate}
+	\item Verbinden mehrerer Datenquellen
+	\begin{enumerate}
+		\item Die Anwendung muss mehrere Datenquellen zusammenführen um so alle Daten zentral abrufbar zu machen.
+		\item Die Anwendung muss bei Unterschiedlichen Werten des selben Schlüssels die Vertrauenswürdigkeit der Datenquelle bewerten um so sich für einen Datensatz zu entscheiden.
+	\end{enumerate}
+	\item Bereitstellung der Daten
+	\begin{enumerate}
+		\item Die Anwendung muss die gesammelten Daten filterbar für jeden bereitstellen.
+		\item Die Anwendung muss bei Wunsch die Daten exportierbar machen.
+	\end{enumerate}
+	\item Darstellung der Daten
+	\begin{enumerate}
+		\item Die Anwendung muss die Daten optisch aufbereiten.
+		\item Die Anwendung muss die Daten im Detail filterbar machen.
+		\item Die Anwendung muss die Daten auch mobil verfügbar machen.
+	\end{enumerate}
+	\item Sonstige Anforderungen
+	\begin{enumerate}
+		\item Die Anwendung muss ohne das Installieren einer zusätzlichen Software über einen Webbrowser im Intranet erreichbar sein.
+		\item Die Daten der Anwendung müssen automatisch aktualisiert werden (Echtzeit).
+		\item Die Anwendung muss Auswertungen schnell erledigen.
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{Pflichtenheft}

@@ -1,9 +1,9 @@
 \section{Projektdurchführung}
 
 	\subsection{Frontend}
-	Für die Entwicklung des Frontends entschied ich mich für Angular in der Version 12 mit Angular Material als Designbibliothek. Angular ist ein Frontend Webapplikationsframework welches auf TypeScript basiert. Es wird ständig durch eine Community bestehend aus tausenden von Einzelpersonen, Unternehmen und Organisationen angeführt von Google weiterentwickelt. \footcite{3}\\
-	Angular ist Komponenten basiert, somit setzt sich die Applikation aus einer Hauptkompontente zusammen welche sich wiederumdann aus mehreren Unterkomponenten zusammensetzt. Derzeit sind es 31 Module, welche die Prozesse, den Liveticker und verschiedene Steuermodule enthalten. Das gesamte Projekt ist modular aufgebaut, sodass man alle Module/Bausteine wiederverwenden kann und somit die Effizienz, Entwickelbarkeit und Wiedererkennung zu verbessern.\\
-	Die Filter Komponente, welche eine zentrale Funktion inne hat, ist dafür da, den Datenfluss zwischen Frontend und Backend aufgrund der Nutzereinstellungen zu steuern. (Appendix: \ref{appendix:foa_filter}) Jeder einzelne Filter bietet die Möglichkeit exakte Selektionen für die Auswahl der Flüge zu treffen. (Appendix: \ref{appendix:foa_filter_2}) Zusätzlich zu der Selektion, gibt es "Vordefinierte Sets (Predefined Sets) womit es möglich ist, Filteroptionen zu gruppieren. Zum Beispiel bei dem Filter "Subfleet" bei dem man den Flugzeugtyp auswählen kann, gibt es die Sets: Narrow Body (Schmale Flugzeuge) und Wide Body (Breite Flugzeuge), das sorgt für eine bessere User Experience. \ref{appendix:foa_filter_3})
+	Für die Entwicklung des Frontends entschied ich mich für Angular in der Version 12 mit Angular Material als Designbibliothek. Angular ist ein Frontend Webapplikationsframework, welches auf TypeScript basiert. Es wird ständig durch eine Community bestehend aus Tausenden von Einzelpersonen, Unternehmen und Organisationen, angeführt von Google, weiterentwickelt. \footcite{3}\\
+	Angular ist komponentenbasiert, somit setzt sich die Applikation aus einer Hauptkompontente zusammen, welche sich wiederum dann aus mehreren Unterkomponenten zusammensetzt. Derzeit sind es 31 Module, welche die Prozesse, den Liveticker und verschiedene Steuermodule enthalten. Das gesamte Projekt ist modular aufgebaut, sodass man alle Module/Bausteine wiederverwenden kann, um somit die Effizienz, Weiterentwickelbarkeit und Wiedererkennung zu verbessern.\\
+	Die Filter Komponente, welche eine zentrale Funktion inne hat, ist dafür da, den Datenfluss zwischen Frontend und Backend, aufgrund der Nutzereinstellungen zu steuern (Appendix: \ref{appendix:foa_filter}). Jeder einzelne Filter bietet die Möglichkeit exakte Selektionen für die Auswahl der Flüge zu treffen (Appendix: \ref{appendix:foa_filter_2}). Zusätzlich zu der Selektion, gibt es "vordefinierte Sets (Predefined Sets), womit es möglich ist, Filteroptionen zu gruppieren. Zum Beispiel bei dem Filter "Subfleet", bei dem man den Flugzeugtyp auswählen kann, gibt es die Sets: Narrow Body (schmale Flugzeuge) und Wide Body (breite Flugzeuge), das sorgt für eine bessere User Experience. \ref{appendix:foa_filter_3})
 
 	\subsubsection{Komponentenaufbau}
 	{
@@ -33,8 +33,8 @@
 	
 
 	\subsection{Backend}
-	Das Backend wurde in NodeJS umgesetzt. NodeJS ist eine Open-Source-JavaScript-Laufzeitumgebung, welche auf der Google V8 Engine basiert und für hochskalierbare Netzwerkapplikationen entworfen wurde. Node.js-Anwendungen sind ereignisbasiert und laufen asynchron ab, diese sind lediglich Single Thread fähig, man kann eine Applikation aber "forken" um diese zu replizieren um sie mit mehreren Threads laufen zu lassen.\footcite{4}\\
-	Das Backend hat mehrere funktionen, einmal eine bestehende OracleDB Datenbankverbindung zum Lufthansa Datawarehouse (\glslink{OBELISK}{Obelisk}) aufrecht zuhalten und verschiedene Tabellen für Flugerreignisse und Prozesszeitstempel in der eigenen lokalen MongoDB Datenbank zu replizieren und nachzuberechnen. Dies geschieht alle 30 Sekunden um eine "Nahezu Echtzeit" Auswertung möglich zu machen. (Appendix: \ref{appendix:mongoose_model})
+	Das Backend wurde in NodeJS umgesetzt. NodeJS ist eine Open-Source-JavaScript-Laufzeitumgebung, welche auf der Google V8 Engine basiert und für hochskalierbare Netzwerkapplikationen entworfen wurde. NodeJS-Anwendungen sind ereignisbasiert und laufen asynchron ab, diese sind lediglich Single Thread fähig, man kann eine Applikation aber "forken", um diese zu replizieren, um sie in mehreren Threads laufen zu lassen.\footcite{4}\\
+	Das Backend hat mehrere Funktionen, einmal um eine bestehende OracleDB Datenbankverbindung zum Lufthansa Datawarehouse (\glslink{OBELISK}{Obelisk}) aufrecht zuhalten und verschiedene Tabellen für Flugereignisse und Prozesszeitstempel in der eigenen lokalen MongoDB Datenbank zu replizieren und nachzuberechnen. Dies geschieht alle 30 Sekunden, um eine "nahezu Echtzeit" Auswertung möglich zu machen (Appendix: \ref{appendix:mongoose_model}).
 
 
 
@@ -47,7 +47,7 @@
 
 	{
 		\noindent
-		Das Archiv des Data Warehouses reicht zum Teil über mehrere Jahrzente zurück, dessen Verarbeitung aber im Wesentlichen echtzeitnah erfolgt.
+		Das Archiv des Data Warehouses reicht zum Teil über mehrere Jahrzehnte zurück, dessen Verarbeitung aber im Wesentlichen echtzeitnah erfolgt.
 	}
 
 	{
@@ -95,7 +95,7 @@
 	
 
 	\subsection{Netzwerkfreigaben}
-	Damit man aus dem Netzwerk auf den Webserver zugreifen kann, ist es zwingend erforderlich in der Lufthansa Internen Firewall die Ports für bestimmte Nutzergruppen zu öffnen.
+	Damit man aus dem Netzwerk auf den Webserver zugreifen kann, ist es zwingend erforderlich in der Lufthansa internen Firewall die Ports für bestimmte Nutzergruppen zu öffnen.
 	Die Anforderung war, dass jeder aus dem Lufthansa Netz und über VPN auf den Webserver zugreifen kann, glücklicherweise geht jeder Traffic über den Lufthansa Proxy, weshalb lediglich die Portfreigabe zwischen dem Proxy Server und dem Webserver bestehen muss.
 	
 	Folgende Ports werden aufgrund des Webservers geöffnet:
