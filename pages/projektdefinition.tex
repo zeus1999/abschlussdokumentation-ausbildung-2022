@@ -7,14 +7,14 @@
 
 		
 		
-		Die Projektdurchführung erfolgt bei nach Ausleihung durch die Lufthansa Systems GmbH an die Lufthansa Passage in der Flugsteuerung [FRA L/GS - Operational Steering \& \glslink{HCC}{HCC} (HUB Control Center Frankfurt)].
+		Die Projektdurchführung erfolgt nach Ausleihung durch die Lufthansa Systems GmbH an die Lufthansa Passage in der Flugsteuerung [FRA L/GS - Operational Steering \& \glslink{HCC}{HCC} (HUB Control Center Frankfurt)].
 
 		{
 			\noindent
 			Die Verantwortung für den weltweiten Verkehrssteuerungsprozess der Lufthansa wird von der
 			Abteilung FRA L/GS wahrgenommen. Dazu gehören insbesondere die Koordination, das
 			Monitoring und die Steuerung aller stationsrelevanten Bodenprozesse für Lufthansa und deren
-			Handling Partner. Der Fokus liegt hierbei sowohl auf der Pünktlichkeit als auch auf der
+			Handling Partner. Der Fokus liegt hierbei sowohl auf der Pünktlichkeit, der Passagierkonnektivität als auch auf der
 			Wirtschaftlichkeit.
 		}
 
@@ -41,21 +41,21 @@
 		}
 		{
 			 \noindent
-			 Es gibt derzeit zwei große Systeme in der Lufthansa, das erste ist \glslink{OBELISK}{Obelisk}, welches nicht nur das Datawarehouse von Lufthansa ist, sondern ebenfalls noch eine umfassende Weboberfläche bietet. \glslink{OBELISK}{Obelisk} stammt etwa aus dem Jahre 2010.
-			Diese Oberfläche hat dutzende Views, auf denen man sich unterschiedlichste Flugwerte anzeigen lassen kann. Die wichtigste View für die Projektabteilung ist, der \glslink{HCC}{HCC}-Reporter. Dieser ist dafür da Flugvolumenzahlen, wie die Passagieranzahl und Flüge, anzuzeigen (Appendix: \ref{appendix:obelisk_hcc_reporter}).
+			Es gibt derzeit zwei große Systeme in der Lufthansa, das erste ist \glslink{OBELISK}{Obelisk}, welches nicht nur das Datawarehouse von Lufthansa ist, sondern ebenfalls noch eine umfassende Weboberfläche bietet. \glslink{OBELISK}{Obelisk} stammt etwa aus dem Jahre 2000.
+			Diese Oberfläche hat dutzende Views, auf denen man sich unterschiedlichste Flugwerte anzeigen lassen kann. Die wichtigste View für die Projektabteilung ist, der \glslink{HCC}{HCC}-Reporter. Dieser ist dafür da Volumenzahlen, wie die Passagieranzahl und Flüge, anzuzeigen (Appendix: \ref{appendix:obelisk_hcc_reporter}).
 			\glslink{OBELISK}{Obelisk} bietet die Möglichkeit mehrerer vordefinierte \glslink{SQL}{SQL} Skripte an, welche im Browser ausgeführt werden können (Appendix: \ref{appendix:obelisk_explorer}).
 			Zusätzlich gibt es mehrere Selektionstools, in denen man über eine grafische Oberfläche \glslink{SQL}{SQL} Statements nachstellen kann (Appendix: \ref{appendix:obelisk_selektion}).
 		}
 
 		{
 			\noindent
-			Das zweite große System ist Tableau. Tableau ist eine Software für Datenvisualisierung und Reporting. Tableau wird größtenteils für die Prozessanalysierung verwendet. Prozesse sind die einzelnen Abläufe für die Flugzeugabfertigung (Deboarding, Cleaning, Catering, Fueling, Loading, Boarding, Pushback).\\
+			Das zweite große System ist Tableau. Tableau ist eine Software für Datenvisualisierung und Reporting. Das System wird größtenteils für die Prozessanalyse verwendet. Prozesse sind die einzelnen Abläufe für die Flugzeugabfertigung beispielsweise (Deboarding, Cleaning, Catering, Fueling, Loading, Boarding, Pushback).\\
 
 		}
 		{
 			\noindent
-			Übersicht über die DeepDives (Appendix: \ref{appendix:tableau_deepdives})\\
-			Beispiel DeepDive - Deboarding (Appendix: \ref{appendix:tableau_deepdive_deboarding})
+			Im Appendix: \ref{appendix:tableau_deepdives} finden Sie eine Übersicht aller DeepDives.\\
+			Unter Appendix: \ref{appendix:tableau_deepdive_deboarding} finden Sie ein Beispiel des DeepDives Deboarding.
 		}
 
 	\subsection{Amortisationsdauer}
@@ -86,7 +86,7 @@
 		Gesamter monetärer Aufwand pro Woche: 360 Euro (18.720 Euro / Jahr)
 
 		\[ 9\,h\,*\,40\,\frac{Euro}{h} = 360\,Euro \]
-		\[ Amortisationdauer = \frac{3694,64\,Euro}{18.720\,Euro} = 0,19736\,Jahre \]
+		\[ Amortisationdauer = \frac{3894,64\,Euro}{18.720\,Euro} = 0,20804\,Jahre \]
 
 		Das Projekt amortisiert sich nach 3 Monaten (gerundet).
 
@@ -96,11 +96,11 @@
 	\subsubsection{Echtzeitsteuerungstool}
 
 	{
-		Durch die Echtzeitsteuerung lässt sich die Performance verbessern, wodurch die Wahrscheinlichkeit das ein Flugzeug stehenbleibt oder das ein Passagier einen Anschluss verpasst, sinkt. Da es derzeit keine Daten zur Auswertung gibt, wird im folgendem Schritt mit Beispieldaten gerechnet.\\
+		Durch die Echtzeitsteuerung lässt sich die Performance verbessern, wodurch die Wahrscheinlichkeit das ein Flugzeug stehen bleibt oder das ein Passagier einen Anschluss verpasst, sinkt. Da es derzeit keine Daten zur Auswertung gibt, wird im folgendem Schritt mit Beispieldaten gerechnet.\\
 		\noindent
 		\underline{\textbf{Annahmen}}\\
-		Ø Kosten für stehengebliebenen Passagier: 200 Euro\\
-		Ø Kosten für stehengebliebenes Flugzeug: 20.000 Euro/h\\
+		Ø Kosten für stehengebliebenen Passagier: 130 Euro\\
+		Ø Kosten für stehengebliebenes Flugzeug: 43.200 Euro\\
 		Gerettete Passagiere pro Jahr: 100\\
 		Gerettete Flugzeuge pro Jahr: 2\\
 
@@ -108,12 +108,13 @@
 
 	{
 		\noindent
-		Vermiedene Kosten durch gerettete Passagiere: 20.000 Euro\\
-		Vermiedene Kosten durch gerettete Flugzeuge: 40.000 Euro\\
-		Vermiedene Kosten: 60.000 Euro\\
+		Vermiedene Kosten durch gerettete Passagiere: 13.000 Euro\\
+		Vermiedene Kosten durch gerettete Flugzeuge: 86.400 Euro\\
+		Vermiedene Kosten: 99.400 Euro\\
 
-		\[ Amortisationdauer = \frac{3694,64\,Euro}{60.000\,Euro} = 0,0615773\,Jahre \]
+		\[ Amortisationdauer = \frac{3894,64\,Euro}{99.400\,Euro} = 0,037169\,Jahre \]
 
-		Das Projekt amortisiert sich nach einem Monat (gerundet).
-
+		Das Projekt amortisiert sich nach einem Monat (gerundet).\\
+		\vspace{8pt}
+		Für die Erläuterung der Kosten siehe Kapitel: \ref{kosten}
 	}
